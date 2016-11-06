@@ -70,16 +70,8 @@ p {
     line-height: 1.5;
 }
 
-
-@media(min-width:400px) {
 .bg-primary {
-   background-color: rgba(48,145,167,.6);
-}
-}
-@media(max-width:400px) {
-.bg-primary {
-   background-color: rgba(48,145,167,.9);
-}
+    background-color: rgba(48,145,167,.6);
 }
 
 .bg-dark {
@@ -210,29 +202,59 @@ margin: 0 0 100px 0;
 
 header {
     position: relative;
-    background-position: bottom;
-    background: url("../img/tested.jpg") no-repeat bottom fixed; 
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+    width: 100%;
+    min-height: auto;
+    text-align: center;
+    color: #fff;
+    background-position: center;
+
+    background-image: url(../img/bkgd.jpg);
+    background-attachment: fixed;
+
+}
+
+@media(max-width:640px) {
+header {
+    position: relative;
+    width: 100%;
+    min-height: auto;
+    text-align: center;
+    color: #fff;
+    background-position: center;
+    background-attachment: fixed;
+display: block;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: -10;
+  background: url(../img/bkgd.jpg) no-repeat center center;
+}
+}
+
+
+@media(max-width:640px) {
+header .header-content .header-content-inner h1 {
+
+}
 }
 
 header .header-content {
-	position: relative; 
+/*position: relative; */
     width: 100%;
     padding: 150px 15px;
     text-align: center;
 }
-
+@media(min-width:640px) {
 header .header-content .header-content-inner h1 {
-	margin: 0 auto;
+margin: 0 auto;
   width: 291px; 
   height: 244px;
   background: url("../img/blanksky-logo-header.png");
   text-indent: -9999px;
-
 }
+}
+
+
 
 header .header-content .header-content-inner hr {
     margin: 30px auto;
